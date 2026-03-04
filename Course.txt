@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public class Course {
+    private String courseName;
+    private Instructor instructor;
+    private ArrayList<Student> students = new ArrayList<>();
+
+    public Course(String courseName, Instructor instructor) {
+        this.courseName = courseName;
+        this.instructor = instructor;
+    }
+
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    public void showCourseDetails() {
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Instructor: " + instructor.getName());
+        System.out.println("Students:");
+        for (Student s : students) {
+            System.out.println(s.getName());
+        }
+    }
+}

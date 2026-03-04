@@ -1,0 +1,53 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Instructor instructor1 = new Instructor("Wafa", 1001, "Computer Science");
+
+        Student s1 = new Student("Layan", 2001, 95.5);
+        Student s2 = new Student("Ozof", 2002, 88.7);
+        Student s3 = new Student("Raghad", 2003, 92.0);
+        Student s4 = new Student("Hind", 2004, 85.3);
+        Student s5 = new Student("Lana", 2005, 90.4);
+        Student s6 = new Student("Sarah", 2006, 87.9);
+        Student s7 = new Student("Rana", 2007, 93.2);
+        Student s8 = new Student("Mashael", 2008, 89.1);
+        Student s9 = new Student("Shomoa", 2009, 91.0);
+        Student s10 = new Student("Jana", 2010, 86.5);
+        Student s11 = new Student("Wasn", 2011, 94.8);
+
+        Course oopCourse = new Course("Object Oriented Programming", instructor1);
+
+        oopCourse.addStudent(s1);
+        oopCourse.addStudent(s2);
+        oopCourse.addStudent(s3);
+        oopCourse.addStudent(s4);
+        oopCourse.addStudent(s5);
+        oopCourse.addStudent(s6);
+        oopCourse.addStudent(s7);
+        oopCourse.addStudent(s8);
+        oopCourse.addStudent(s9);
+        oopCourse.addStudent(s10);
+        oopCourse.addStudent(s11);
+
+        System.out.println("===== Course Details =====");
+        oopCourse.showCourseDetails();
+
+        System.out.println("\n===== Display Instructor Info =====");
+        instructor1.displayInfo();
+
+        System.out.println("\n===== Display Student Info (Polymorphism) =====");
+        Person p;
+
+        p = s1; p.displayInfo();
+        p = s2; p.displayInfo();
+        p = s3; p.displayInfo();
+        p = s4; p.displayInfo();
+        p = s5; p.displayInfo();
+        p = s6; p.displayInfo();
+        p = s7; p.displayInfo();
+        p = s8; p.displayInfo();
+        p = s9; p.displayInfo();
+        p = s10; p.displayInfo();
+        p = s11; p.displayInfo();
+    }
+}
